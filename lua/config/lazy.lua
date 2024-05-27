@@ -12,29 +12,28 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
-	defaults = {
-		lazy = true,
-	},
-	-- rtp = {
-	-- 	disabled_plugins = {
-	-- 					"gzip",
-	-- 					"matchit",
-	-- 					"matchparen",
-	-- 					"netrwPlugin",
- --        		"tarPlugin",
-	-- 					"tohtml",
- --        		"tutor",
- --        		"zipPlugin",
- --      			},
-	-- 	},
-	change_detection = {
-		notify = false,
-	},
+  defaults = {
+    lazy = true,
+  },
+  -- rtp = {
+  -- 	disabled_plugins = {
+  -- 					"gzip",
+  -- 					"matchit",
+  -- 					"matchparen",
+  -- 					"netrwPlugin",
+  --        		"tarPlugin",
+  -- 					"tohtml",
+  --        		"tutor",
+  --        		"zipPlugin",
+  --      			},
+  -- 	},
+  change_detection = {
+    notify = false,
+  },
   checker = {
     enabled = true,
     notify = false,
   },
 }
 
-require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp" } }, opts) 
-
+require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp" }, { import = "plugins.colorscheme" } }, opts)

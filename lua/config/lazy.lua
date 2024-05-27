@@ -35,4 +35,6 @@ local opts = {
     notify = false,
   },
 }
-require("lazy").setup("plugins", opts)
+
+require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp" } }, opts) 
+

@@ -24,8 +24,8 @@ keymap("n", "<leader>sh", ":split<CR>", opts) --split horizontal
 keymap("n", "<leader>sx", "<cmd>close<CR>", opts) --Close split
 
 -- Comments
-vim.api.nvim_set_keymap("n", "<C-_>", "gcc", { noremap = false })
-vim.api.nvim_set_keymap("v", "<C-_>", "gcc", { noremap = false })
+vim.api.nvim_set_keymap("n", "<C-_>", "gcc", {desc = "comment line"})
+vim.api.nvim_set_keymap("v", "<C-_>", "gcc", {desc = "comment selected"})
 
 -- Indenting
 keymap("v", "<", "<gv") -- Shift Indentation to Left

@@ -12,21 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
-  defaults = {
-    lazy = true,
-  },
-  -- rtp = {
-  -- 	disabled_plugins = {
-  -- 					"gzip",
-  -- 					"matchit",
-  -- 					"matchparen",
-  -- 					"netrwPlugin",
-  --        		"tarPlugin",
-  -- 					"tohtml",
-  --        		"tutor",
-  --        		"zipPlugin",
-  --      			},
-  -- 	},
   change_detection = {
     notify = false,
   },

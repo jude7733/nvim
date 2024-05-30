@@ -1,10 +1,10 @@
 local config = function()
-  local theme = require("lualine.themes.kanagawa")
+  local current_colorscheme = vim.g.colors_name
   local lazy_status = require("lazy.status")
 
   require("lualine").setup({
     options = {
-      theme = theme,
+      theme = require("lualine.themes." .. current_colorscheme),
     },
     tabline = {},
     sections = {

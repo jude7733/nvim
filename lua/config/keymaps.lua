@@ -7,7 +7,7 @@ keymap("i", "jk", "<ESC>", { desc = "Exit insert mode" })
 keymap("n", "<leader>+", "<C-a>", { desc = "Increment number" })
 keymap("n", "<leader>-", "<C-x>", { desc = "decrement number" })
 
--- Directory nav
+-- nvim-tree
 keymap("n", "<leader>ef", ":NvimTreeFocus<CR>", { desc = "Focus on file tree" })
 keymap("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
 keymap("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
@@ -31,13 +31,19 @@ keymap("n", "<leader>sh", ":split<CR>", { desc = "split horizontal" })
 keymap("n", "<leader>sx", "<cmd>close<CR>", { desc = "close split" })
 
 -- Auto session
-keymap("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" })
-keymap("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session for auto session root dir" })
+keymap("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session" })
+keymap("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session" })
 
 -- Comments
 vim.api.nvim_set_keymap("n", "<C-_>", "gcc", { desc = "comment line" })
 vim.api.nvim_set_keymap("v", "<C-_>", "gcc", { desc = "comment selected" })
 
--- Indenting
-keymap("v", "<", "<gv", { desc = "Shift Indentation to Left" })
-keymap("v", ">", ">gv", { desc = "Shift Indentation Right" })
+-- Lspsaga
+keymap("n", "<leader>lf", "<cmd>Lspsaga finder<CR>", { desc = "Finder window" })
+keymap("n", "<leader>ld", "<cmd>Lspsaga goto_definition<CR>", { desc = "Preview definition" })
+keymap("n", "<leader>lh", "<cmd>Lspsaga hover_doc<CR>", { desc = "Hover doc" })
+keymap("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", { desc = "Rename" })
+keymap("n", "<leader>lc", "<cmd>Lspsaga code_action<CR>", { desc = "Code action" })
+keymap("n", "<leader>ls", "<cmd>Lspsaga signature_help<CR>", { desc = "Signature help" })
+keymap("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", { desc = "open Outline" })
+keymap("n", "<leader>lt", "<cmd>Lspsaga term_toggle<CR>", { desc = "Toggle terminal" })

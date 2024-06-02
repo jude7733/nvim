@@ -47,3 +47,4 @@ keymap("n", "<leader>lc", "<cmd>Lspsaga code_action<CR>", { desc = "Code action"
 keymap("n", "<leader>ls", "<cmd>Lspsaga signature_help<CR>", { desc = "Signature help" })
 keymap("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", { desc = "open Outline" })
 keymap("n", "<leader>lt", "<cmd>Lspsaga term_toggle<CR>", { desc = "Toggle terminal" })
+keymap("t", "<leader>lt", "<C-\\><C-n>:Lspsaga term_toggle<CR>", { desc = "Close terminal" })

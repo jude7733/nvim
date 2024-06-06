@@ -1,4 +1,4 @@
-local keymap = vim.keymap.set
+local keymap = vim.api.nvim_set_keymap
 
 -- Exit insert mode
 keymap("i", "jk", "<ESC>", { desc = "Exit insert mode" })
@@ -17,7 +17,9 @@ keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find 
 keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 keymap("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", { desc = "Show Telescope keymaps" })
-keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find Buffers" })
+keymap("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>", { desc = "Show diagnostics" })
+keymap("n", "<leader>fc", "<cmd>Telescope colorscheme<cr>", { desc = "colorscheme" })
+keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Find Buffers" })
 
 -- Split nav
 keymap("n", "<C-h>", "<C-w>h", { desc = "nav left" })
@@ -35,8 +37,8 @@ keymap("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session" 
 keymap("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session" })
 
 -- Comments
-vim.api.nvim_set_keymap("n", "<C-_>", "gcc", { desc = "comment line" })
-vim.api.nvim_set_keymap("v", "<C-_>", "gcc", { desc = "comment selected" })
+keymap("n", "<C-_>", "gcc", { desc = "comment line" })
+keymap("v", "<C-_>", "gcc", { desc = "comment selected" })
 
 -- Lspsaga
 keymap("n", "<leader>lf", "<cmd>Lspsaga finder<CR>", { desc = "Finder window" })

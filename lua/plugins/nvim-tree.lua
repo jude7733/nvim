@@ -6,7 +6,6 @@ return {
 		vim.g.loaded_netrw = 1
 		vim.g.loaded_netrwPlugin = 1
 
-					quit_on_open = true,
 		require("nvim-tree").setup({
 			view = {
 				width = 28,
@@ -28,6 +27,7 @@ return {
 			-- disable window_picker explorer to work well window splits
 			actions = {
 				open_file = {
+					quit_on_open = true,
 					window_picker = {
 						enable = false,
 					},

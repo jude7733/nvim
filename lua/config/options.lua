@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 local opt = vim.opt
 
 -- Tab / Indentation
@@ -20,7 +22,7 @@ opt.cursorline = true
 opt.relativenumber = true
 opt.termguicolors = true
 opt.background = "dark"
-opt.colorcolumn = '100'
+opt.colorcolumn = "100"
 opt.signcolumn = "yes"
 opt.cmdheight = 1
 opt.scrolloff = 10
@@ -38,7 +40,7 @@ opt.splitright = true
 opt.splitbelow = true
 opt.autochdir = false
 -- apt.iskeyword:append("-")
-opt.mouse:append('a')
+opt.mouse:append("a")
 opt.clipboard:append("unnamedplus")
 opt.modifiable = true
 -- opt.guicursor = "n-y-c:block,i-ci-ve:block,r-cr:hor2-,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"

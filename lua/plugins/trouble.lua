@@ -31,6 +31,7 @@ return {
 			"<cmd>Trouble qflist toggle<cr>",
 			desc = "Quickfix List (Trouble)",
 		},
+		{ "<leader>xt", "<cmd>TodoTrouble<CR>", desc = "Open todos in trouble" },
 	},
 	opts = {}, -- for default options, refer to the configuration section for custom setup.
 }

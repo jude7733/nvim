@@ -19,6 +19,8 @@ keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Find string 
 keymap("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", { desc = "Show Telescope keymaps" })
 keymap("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>", { desc = "Show diagnostics" })
 keymap("n", "<leader>fc", "<cmd>Telescope colorscheme<cr>", { desc = "colorscheme" })
+keymap("n", "<leader>fo", "<cmd>Telescope vim_options<cr>", { desc = "Vim Options" })
+keymap("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Find Buffers" })
 
 -- Split nav
@@ -37,8 +39,8 @@ keymap("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session" 
 keymap("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session" })
 
 -- Comments
-keymap("n", "<C-_>", "gcc", { desc = "comment line" })
-keymap("v", "<C-_>", "gcc", { desc = "comment selected" })
+keymap("n", "<C-_>", "gcc", { desc = "comment line", noremap = true, silent = true })
+keymap("v", "<C-_>", "gcc", { desc = "comment selected", noremap = true, silent = true })
 
 -- Lspsaga
 keymap("n", "<leader>lf", "<cmd>Lspsaga finder<CR>", { desc = "Finder window" })

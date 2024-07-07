@@ -1,5 +1,8 @@
 local config = function()
 	local current_colorscheme = vim.g.colors_name
+	if current_colorscheme == nil then
+		current_colorscheme = "rose-pine"
+	end
 	local lazy_status = require("lazy.status")
 
 	require("lualine").setup({

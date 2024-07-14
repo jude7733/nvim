@@ -34,6 +34,9 @@ local opts = {
 			},
 		},
 	},
+	ui = {
+		border = "rounded",
+	},
 }
 
 require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp" }, { import = "plugins.colorscheme" } }, opts)

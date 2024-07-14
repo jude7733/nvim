@@ -9,7 +9,7 @@ keymap("n", "<leader>-", "<C-x>", { desc = "decrement number" })
 
 -- nvim-tree
 keymap("n", "<leader>ef", ":NvimTreeFocus<CR>", { desc = "Focus on file tree" })
-keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
+keymap("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
 keymap("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
 
 -- Telescope
@@ -39,8 +39,8 @@ keymap("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session" 
 keymap("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session" })
 
 -- Comments
-keymap("n", "<C-_>", "gcc", { desc = "comment line", noremap = true, silent = true })
-keymap("v", "<C-_>", "gcc", { desc = "comment selected", noremap = true, silent = true })
+keymap("n", "<leader>c", "gcc", { desc = "comment line" })
+keymap("v", "<leader>c", "gcc", { desc = "comment selected" })
 
 -- Lspsaga
 keymap("n", "<leader>lf", "<cmd>Lspsaga finder<CR>", { desc = "Finder window" })

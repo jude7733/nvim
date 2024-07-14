@@ -1,7 +1,12 @@
 return {
-  "EdenEast/nightfox.nvim",
-  event = "VeryLazy",
-  -- config = function()
-  --   vim.cmd('colorscheme nightfox')
-  -- end
+	"EdenEast/nightfox.nvim",
+	event = "VeryLazy",
+	config = function()
+		require("nightfox").setup({
+			options = {
+				tranparent = true,
+			},
+		})
+		-- vim.cmd('colorscheme nightfox')
+	end,
 }

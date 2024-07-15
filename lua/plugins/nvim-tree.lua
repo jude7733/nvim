@@ -8,7 +8,7 @@ return {
 
 		require("nvim-tree").setup({
 			view = {
-				width = 28,
+				width = 26,
 			},
 			-- change folder arrow icons
 			renderer = {
@@ -27,7 +27,7 @@ return {
 			-- disable window_picker explorer to work well window splits
 			actions = {
 				open_file = {
-					quit_on_open = true,
+					-- quit_on_open = true,
 					window_picker = {
 						enable = false,
 					},

@@ -4,7 +4,7 @@ local keymap = vim.api.nvim_set_keymap
 keymap("i", "jk", "<ESC>", { desc = "Exit insert mode" })
 
 -- inc/dec number
-keymap("n", "<leader>+", "<C-a>", { desc = "Increment number" })
+keymap("n", "<leader>+", "<C-a>", { desc = "increment number" })
 keymap("n", "<leader>-", "<C-x>", { desc = "decrement number" })
 
 -- nvim-tree
@@ -21,7 +21,7 @@ keymap("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>", { desc = "Show diagn
 keymap("n", "<leader>fc", "<cmd>Telescope colorscheme<cr>", { desc = "colorscheme" })
 keymap("n", "<leader>fo", "<cmd>Telescope vim_options<cr>", { desc = "Vim Options" })
 keymap("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
-keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Find Buffers" })
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find Buffers" })
 
 -- Split nav
 keymap("n", "<C-h>", "<C-w>h", { desc = "nav left" })
@@ -52,3 +52,25 @@ keymap("n", "<leader>ls", "<cmd>Lspsaga signature_help<CR>", { desc = "Signature
 keymap("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", { desc = "open Outline" })
 keymap("n", "<leader>lt", "<cmd>Lspsaga term_toggle<CR>", { desc = "Toggle terminal" })
 keymap("t", "<leader>lt", "<C-\\><C-n>:Lspsaga term_toggle<CR>", { desc = "Close terminal" })
+
+-- Buffer control
+keymap("n", "<S-L>", ":BufferLineCycleNext<CR>", { desc = "Next buffer" })
+keymap("n", "<S-H>", ":BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
+keymap("n", "<leader>kk", "<cmd>close<CR>", { desc = "close current" })
+keymap("n", "<leader>ko", "<cmd>BufferLineCloseOthers<CR>", { desc = "close others" })
+keymap("n", "<leader>kh", "<cmd>BufferLineCloseLeft<CR>", { desc = "close left" })
+keymap("n", "<leader>kl", "<cmd>BufferLineCloseRight<CR>", { desc = "close right" })
+
+-- W3m browser
+function OpenW3mWithUrl(split)
+	split = split or ""
+	local url = vim.fn.input("Search: ")
+	vim.cmd("W3m" .. split .. " " .. url)
+end
+vim.keymap.set("n", "<leader>//", OpenW3mWithUrl, { desc = "Open w3m browser" })
+vim.keymap.set("n", "<leader>/v", function()
+	OpenW3mWithUrl("VSplit")
+end, { desc = "vertical split" })
+vim.keymap.set("n", "<leader>/h", function()
+	OpenW3mWithUrl("Split")
+end, { desc = "horizontal split" })

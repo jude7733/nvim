@@ -140,3 +140,23 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 		end)
 	end,
 })
+
+vim.api.nvim_create_autocmd("LspAttach", {
+	pattern = { "*.ts", "*.tsx", "*.js", "*.jsx" },
+	callback = function()
+		vim.keymap.set("n", "<leader>lo", function()
+			vim.notify("Organizing imports...")
+			vim.cmd("TSToolsOrganizeImports")
+		end, { desc = "Organize imports" })
+	end,
+})
+
+vim.api.nvim_create_autocmd("LspAttach", {
+	pattern = { "*.ts", "*.tsx", "*.js", "*.jsx" },
+	callback = function()
+		vim.keymap.set("n", "<leader>li", function()
+			vim.notify("Adding missing imports...")
+			vim.cmd("TSToolsAddMissingImports")
+		end, { desc = "Add missing imports" })
+	end,
+})

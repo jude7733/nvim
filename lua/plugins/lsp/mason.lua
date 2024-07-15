@@ -28,7 +28,7 @@ return {
         "cssls",
         "tailwindcss",
         "lua_ls",
-        "graphql",
+        -- "graphql",
         "emmet_ls",
         "pyright",
         "bashls",

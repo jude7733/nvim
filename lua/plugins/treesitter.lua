@@ -22,6 +22,8 @@ local config = function()
 			"java",
 			"rust",
 			"tsx",
+			"markdown",
+			"markdown_inline",
 		},
 		auto_install = true,
 		highlight = {

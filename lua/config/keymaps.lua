@@ -22,6 +22,7 @@ keymap("n", "<leader>fc", "<cmd>Telescope colorscheme<cr>", { desc = "colorschem
 keymap("n", "<leader>fo", "<cmd>Telescope vim_options<cr>", { desc = "Vim Options" })
 keymap("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find Buffers" })
+keymap("n", "<leader>fs", "<cmd>Telescope search_history<cr>", { desc = "Search history" })
 
 -- Split nav
 keymap("n", "<C-h>", "<C-w>h", { desc = "nav left" })
@@ -60,6 +61,8 @@ keymap("n", "<leader>kk", "<cmd>close<CR>", { desc = "close current" })
 keymap("n", "<leader>ko", "<cmd>BufferLineCloseOthers<CR>", { desc = "close others" })
 keymap("n", "<leader>kh", "<cmd>BufferLineCloseLeft<CR>", { desc = "close left" })
 keymap("n", "<leader>kl", "<cmd>BufferLineCloseRight<CR>", { desc = "close right" })
+keymap("n", "<leader>kd", "<cmd>BufferLineSortByDirectory<CR>", { desc = "sort by directory" })
+keymap("n", "<leader>kr", "<cmd>BufferLineSortByRelativeDirectory<CR>", { desc = "sort by relative directory" })
 
 -- W3m browser
 function OpenW3mWithUrl(split)

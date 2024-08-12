@@ -5,9 +5,6 @@ return {
 			ui = {
 				code_action = "",
 			},
-			code_action_prompt = {
-				virtual_text = false,
-			},
 			code_action = {
 				num_shortcut = true,
 				show_server_name = true,

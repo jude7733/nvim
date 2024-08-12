@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 local opt = vim.opt
+vim.notify = require("notify")
 
 -- Tab / Indentation
 opt.tabstop = 2

@@ -58,7 +58,7 @@ keymap("t", "<leader>lt", "<C-\\><C-n>:Lspsaga term_toggle<CR>", { desc = "Close
 -- Buffer control
 keymap("n", "<S-L>", ":BufferLineCycleNext<CR>", { desc = "Next buffer" })
 keymap("n", "<S-H>", ":BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
-keymap("n", "<leader>kk", "<cmd>close<CR>", { desc = "close current" })
+keymap("n", "<leader>kk", "<cmd>bd<CR>", { desc = "close current" })
 keymap("n", "<leader>ko", "<cmd>BufferLineCloseOthers<CR>", { desc = "close others" })
 keymap("n", "<leader>kh", "<cmd>BufferLineCloseLeft<CR>", { desc = "close left" })
 keymap("n", "<leader>kl", "<cmd>BufferLineCloseRight<CR>", { desc = "close right" })

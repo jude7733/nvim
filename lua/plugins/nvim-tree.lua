@@ -9,6 +9,7 @@ return {
 		require("nvim-tree").setup({
 			view = {
 				width = 26,
+				side = "right",
 			},
 			-- change folder arrow icons
 			renderer = {

@@ -4,6 +4,11 @@
 
 This repository contains my personal Neovim configuration files, designed to enhance productivity and streamline my coding workflow. This setup is tailored for users who want a modern, efficient IDE like experience with Neovim.
 
+## Screenshots
+
+<img src="./screenshots/dashboard.png" alt="Dashboard" width="100%">
+<img src="./screenshots/web.png" alt="Web files" width="100%">
+
 ## Prerequisites
 
 - **[nvim](https://github.com/neovim/neovim)**: Version 0.10 or higher.

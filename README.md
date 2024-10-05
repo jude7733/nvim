@@ -6,12 +6,12 @@ This repository contains my personal Neovim configuration files, designed to enh
 
 ## Prerequisites
 
-- **nvim**: Version 10 or higher is required.
-- **npm**: Required for installing Node.js packages and plugins.
-- **nodejs**: Required for installing Node.js packages and plugins.
-- **ripgrep**: Required for the Telescope plugin.
-- **nerd-fonts**: Required for the icons to display correctly.
-- **lazygit**: Required for the lazygit plugin.
+- **[nvim](https://github.com/neovim/neovim)**: Version 0.10 or higher.
+- **[npm](https://github.com/npm/cli)**: Required for installing Node.js packages and plugins.
+- **[nodejs](https://github.com/nodejs/node)**: Required for installing Node.js packages and plugins.
+- **[ripgrep](https://github.com/BurntSushi/ripgrep)**: Required for the Telescope plugin.
+- **[nerd-fonts](https://www.nerdfonts.com/)**: Required for the icons to display correctly.
+- **[lazygit](https://github.com/jesseduffield/lazygit)**: Required for the lazygit plugin.
 
 ## To set up nvim configuration:
 
@@ -44,8 +44,8 @@ git clone https://github.com/jude7733/nvim.git ~/.config/nvim
 
 ### Git Integration
 
-- **[lazygit]()**: Terminal UI for Git commands.
-- **[gitsigns]()**: Git integration with Neovim.
+- **[lazygit](https://github.com/kdheepak/lazygit.nvim)**: Terminal UI for Git commands.
+- **[gitsigns](https://github.com/lewis6991/gitsigns.nvim)**: Git integration with Neovim.
 
 ### File Management
 

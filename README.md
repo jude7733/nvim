@@ -41,7 +41,7 @@ git clone https://github.com/jude7733/nvim.git ~/.config/nvim
 
 ### Autocompletion
 
-- **[nvim-cmp](https://github.com/hrsh7th/nvim-cmp)**: Autocompletion plugin.
+- **[blink.cmp](https://github.com/Saghen/blink.cmp)**: Performant, batteries-included completion plugin.
 
 ### Fuzzy Finder
 
@@ -64,7 +64,7 @@ git clone https://github.com/jude7733/nvim.git ~/.config/nvim
 - **[alpha](https://github.com/goolord/alpha-nvim)**: Dashboard plugin.
 - **[dressing](https://github.com/stevearc/dressing.nvim)**: Improved UI for input dialogs.
 - **[noice](https://github.com/folke/noice.nvim)**: Enhanced UI for messages, cmdline, and popup menu.
-- **[indentline](https://github.com/lukas-reineke/indent-blankline.nvim)**: Provides indent guides
+- **[indentscope](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-indentscope.md)**: Provides indent guides
 - **[nvim-colorizer](https://github.com/NvChad/nvim-colorizer.lua)**: Colorizer plugin for better color handling in code.
 - **[vim-illuminate](https://github.com/RRethy/vim-illuminate)**: Highlight references to the word under the cursor.
 
@@ -103,7 +103,7 @@ git clone https://github.com/jude7733/nvim.git ~/.config/nvim
 ### Markdown Support
 
 - **[markdown-preview](https://github.com/iamcco/markdown-preview.nvim)**: Live preview for Markdown files.
-- **[markdown.nvim](https://github.com/ellisonleao/glow.nvim)**: Markdown rendering.
+- **[markdown](https://github.com/ellisonleao/glow.nvim)**: Markdown rendering.
 
 ### Notifications and Diagnostics
 

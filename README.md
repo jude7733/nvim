@@ -83,8 +83,8 @@ git clone https://github.com/jude7733/nvim.git ~/.config/nvim
 - **[nvim-comment](https://github.com/terrortylor/nvim-comment)**: Commenting utility.
 - **[treesitter](https://github.com/nvim-treesitter/nvim-treesitter)**: Syntax highlighting and code parsing.
 - **[nvim-autopairs](https://github.com/windwp/nvim-autopairs)**: Automatically close pairs of characters.
-- **[nvim-surround](https://github.com/blackCauldron7/surround.nvim)**: Easily add, change or delete surrounding characters.
-- **[vim-maximizer](https://github.com/szwagier/vim-maximizer)**: Maximize and restore windows easily.
+- **[nvim-surround](https://github.com/kylechui/nvim-surround)**: Easily add, change or delete surrounding characters.
+- **[vim-maximizer](https://github.com/szw/vim-maximizer)**: Maximize and restore windows easily.
 
 ### Session and Buffer Management
 
@@ -97,13 +97,13 @@ git clone https://github.com/jude7733/nvim.git ~/.config/nvim
 
 ### Formatting and Linting
 
-- **[conform](https://github.com/mattn/conform.nvim)**: Code formatter.
+- **[conform](https://github.com/stevearc/conform.nvim)**: Code formatter.
 - **[nvim-lint](https://github.com/mfussenegger/nvim-lint)**: Linting utility.
 
 ### Markdown Support
 
 - **[markdown-preview](https://github.com/iamcco/markdown-preview.nvim)**: Live preview for Markdown files.
-- **[markdown.nvim](https://github.com/ellisonleao/glow.nvim)**: Markdown rendering.
+- **[render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)**: Markdown rendering.
 
 ### Notifications and Diagnostics
 

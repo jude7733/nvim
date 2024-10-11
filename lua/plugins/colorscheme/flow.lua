@@ -1,6 +1,6 @@
 return {
 	"0xstepit/flow.nvim",
-	opts = {},
+	lazy = true,
 	config = function()
 		require("flow").setup({
 			dark_theme = true, -- Set the theme with dark background.

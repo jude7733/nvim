@@ -1,4 +1,4 @@
 return {
 	"ellisonleao/gruvbox.nvim",
-	event = "VeryLazy",
+  lazy = true,
 }

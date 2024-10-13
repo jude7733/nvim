@@ -1,6 +1,7 @@
 return {
 	"RRethy/vim-illuminate",
-	event = "VeryLazy",
+	lazy = true,
+	event = "BufRead",
 	config = function()
 		require("illuminate").configure({})
 	end,

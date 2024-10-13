@@ -1,4 +1,5 @@
 return {
 	"yuratomo/w3m.vim",
-	event = "VeryLazy",
+	lazy = true,
+	cmd = "W3m",
 }

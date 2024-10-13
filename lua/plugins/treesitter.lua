@@ -1,5 +1,12 @@
-local config = function()
-	require("nvim-treesitter.configs").setup({
+return {
+	"nvim-treesitter/nvim-treesitter",
+	lazy = true,
+	event = { "BufReadPre", "BufNewFile" },
+	build = ":TSUpdate",
+	dependencies = {
+		"windwp/nvim-ts-autotag",
+	},
+	opts = {
 		indent = {
 			enable = true,
 		},
@@ -39,15 +46,5 @@ local config = function()
 				node_decremental = "<BS>",
 			},
 		},
-	})
-end
-
-return {
-	"nvim-treesitter/nvim-treesitter",
-	event = { "BufReadPre", "BufNewFile" },
-	build = ":TSUpdate",
-	dependencies = {
-		"windwp/nvim-ts-autotag",
 	},
-	config = config,
 }

@@ -1,1 +1,1 @@
-return { "akinsho/toggleterm.nvim", version = "*", config = true, event = "VeryLazy" }
+return { "akinsho/toggleterm.nvim", version = "*", config = true, lazy = true, cmd = "ToggleTerm" }

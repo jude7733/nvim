@@ -1,7 +1,8 @@
 return {
 	"echasnovski/mini.indentscope",
 	version = "*",
-	event = "VeryLazy",
+	lazy = true,
+	event = "BufReadPost",
 	config = function()
 		require("mini.indentscope").setup()
 	end,

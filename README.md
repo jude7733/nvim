@@ -12,8 +12,8 @@ This repository contains my personal Neovim configuration files, designed to enh
 ## Prerequisites
 
 - **[nvim](https://github.com/neovim/neovim)**: Version 0.10 or higher.
-- **[npm](https://github.com/npm/cli)**: Required for installing Node.js packages and plugins.
-- **[nodejs](https://github.com/nodejs/node)**: Required for installing Node.js packages and plugins.
+- **[npm](https://github.com/npm/cli)** and **[nodejs](https://github.com/nodejs/node)**: Required for installing packages and plugins.
+- **[deno](https://github.com/denoland/deno)** and **[webkit2gtk](https://webkitgtk.org)**: Required for markdown preview (peek).
 - **[ripgrep](https://github.com/BurntSushi/ripgrep)**: Required for the Telescope plugin.
 - **[nerd-fonts](https://www.nerdfonts.com/)**: Required for the icons to display correctly.
 - **[lazygit](https://github.com/jesseduffield/lazygit)**: Required for the lazygit plugin.
@@ -67,6 +67,7 @@ git clone https://github.com/jude7733/nvim.git ~/.config/nvim
 - **[indentscope](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-indentscope.md)**: Provides indent guides
 - **[nvim-colorizer](https://github.com/NvChad/nvim-colorizer.lua)**: Colorizer plugin for better color handling in code.
 - **[vim-illuminate](https://github.com/RRethy/vim-illuminate)**: Highlight references to the word under the cursor.
+- **[eyeliner](https://github.com/jinh0/eyeliner.nvim)**: Move faster with unique f/F indicators.
 
 ### Color Schemes
 
@@ -102,7 +103,7 @@ git clone https://github.com/jude7733/nvim.git ~/.config/nvim
 
 ### Markdown Support
 
-- **[markdown-preview](https://github.com/iamcco/markdown-preview.nvim)**: Live preview for Markdown files.
+- **[peek](https://github.com/toppair/peek.nvim)**: Markdown preview plugin for Neovim.
 - **[render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim)**: Markdown rendering.
 
 ### Notifications and Diagnostics

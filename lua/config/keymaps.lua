@@ -1,9 +1,9 @@
 local keymap = vim.api.nvim_set_keymap
 
--- Exit insert mode
 keymap("i", "jk", "<ESC>", { desc = "Exit insert mode" })
 
--- inc/dec number
+keymap("n", "ZZ", "<cmd>q!<cr>", { desc = "Exit without saving" })
+
 keymap("n", "<leader>+", "<C-a>", { desc = "increment number" })
 keymap("n", "<leader>-", "<C-x>", { desc = "decrement number" })
 
@@ -22,8 +22,9 @@ keymap("n", "<leader>fc", "<cmd>Telescope colorscheme<cr>", { desc = "colorschem
 keymap("n", "<leader>fo", "<cmd>Telescope vim_options<cr>", { desc = "Vim Options" })
 keymap("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find Buffers" })
-keymap("n", "<leader>fs", "<cmd>Telescope search_history<cr>", { desc = "Search history" })
+keymap("n", "<leader>f/", "<cmd>Telescope search_history<cr>", { desc = "Search history" })
 keymap("n", "<leader>fn", "<cmd>Telescope notify<cr>", { desc = "Show notifications" })
+keymap("n", "<leader>fs", "<cmd>SessionSearch<cr>", { desc = "Session Search" })
 
 -- Split nav
 keymap("n", "<C-h>", "<C-w>h", { desc = "nav left" })
@@ -39,6 +40,9 @@ keymap("n", "<leader>sx", "<cmd>close<CR>", { desc = "close split" })
 -- Auto session
 keymap("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session" })
 keymap("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session" })
+keymap("n", "<leader>wa", "<cmd>SessionToggleAutoSave<CR>", { desc = "Toggle autosave" })
+keymap("n", "<leader>wd", "<cmd>Autosession delete<CR>", { desc = "Delete autosave" })
+keymap("n", "<leader>w/", "<cmd>Autosession search<CR>", { desc = "Search autosave" })
 
 -- Comments
 keymap("n", "<leader>c", "gcc", { desc = "comment line" })
@@ -50,7 +54,6 @@ keymap("n", "<leader>ld", "<cmd>Lspsaga goto_definition<CR>", { desc = "Preview 
 keymap("n", "<leader>lh", "<cmd>Lspsaga hover_doc<CR>", { desc = "Hover doc" })
 keymap("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", { desc = "Rename" })
 keymap("n", "<leader>lc", "<cmd>Lspsaga code_action<CR>", { desc = "Code action" })
-keymap("n", "<leader>ls", "<cmd>Lspsaga signature_help<CR>", { desc = "Signature help" })
 keymap("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", { desc = "open Outline" })
 keymap("n", "<leader>lt", "<cmd>Lspsaga term_toggle<CR>", { desc = "Toggle terminal" })
 keymap("t", "<leader>lt", "<C-\\><C-n>:Lspsaga term_toggle<CR>", { desc = "Close terminal" })

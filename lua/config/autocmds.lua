@@ -8,17 +8,17 @@ autocmd("TextYankPost", {
 	desc = "Highlight yanked text",
 	pattern = "*",
 	callback = function()
-		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 250 })
+		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 700 })
 	end,
 })
 
-vim.api.nvim_create_augroup("auto_save", { clear = true })
-autocmd("FocusLost", {
-	group = "auto_save",
-	pattern = "*",
-	command = "silent! wa",
-	desc = "Auto save when focus is lost",
-})
+-- vim.api.nvim_create_augroup("auto_save", { clear = true })
+-- autocmd("FocusLost", {
+-- 	group = "auto_save",
+-- 	pattern = "*",
+-- 	command = "silent! wa",
+-- 	desc = "Auto save when focus is lost",
+-- })
 
 vim.b.miniindentscope_disable = true
 autocmd("TermOpen", {

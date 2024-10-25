@@ -1,10 +1,13 @@
 return {
-	-- event = "VeryLazy",
+	event = "VeryLazy",
 	"folke/which-key.nvim",
 	init = function()
 		vim.o.timeout = true
 		vim.o.timeoutlen = 500
 	end,
+	opts = {
+		triggers = { "<leader>", mode = { "n", "v" } },
+	},
 	config = function()
 		require("which-key").add({
 			{ "<leader>k", group = "close" },
@@ -19,4 +22,13 @@ return {
 			{ "<leader>/", group = "browse" },
 		})
 	end,
+	keys = {
+		{
+			"<leader>?",
+			function()
+				require("which-key").show({ global = false })
+			end,
+			desc = "Buffer Local Keymaps (which-key)",
+		},
+	},
 }

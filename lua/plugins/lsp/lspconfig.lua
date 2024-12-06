@@ -55,6 +55,12 @@ return {
 					},
 				})
 			end,
+			["jsonls"] = function()
+				lspconfig["jsonls"].setup({
+					capabilities = capabilities,
+					filetypes = { "json", "jsonc" },
+				})
+			end,
 		})
 	end,
 }

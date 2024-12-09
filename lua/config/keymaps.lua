@@ -61,17 +61,11 @@ keymap("t", "<leader>lt", "<C-\\><C-n>:Lspsaga term_toggle<CR>", { desc = "Close
 -- Buffer control
 keymap("n", "<S-L>", ":BufferLineCycleNext<CR>", { desc = "Next buffer" })
 keymap("n", "<S-H>", ":BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
-keymap("n", "<leader>kk", "<cmd>bd<CR>", { desc = "close current" })
 keymap("n", "<leader>ko", "<cmd>BufferLineCloseOthers<CR>", { desc = "close others" })
 keymap("n", "<leader>kh", "<cmd>BufferLineCloseLeft<CR>", { desc = "close left" })
 keymap("n", "<leader>kl", "<cmd>BufferLineCloseRight<CR>", { desc = "close right" })
 keymap("n", "<leader>kd", "<cmd>BufferLineSortByDirectory<CR>", { desc = "sort by directory" })
 keymap("n", "<leader>kr", "<cmd>BufferLineSortByRelativeDirectory<CR>", { desc = "sort by relative directory" })
-
--- Toggleterm
-keymap("n", "<leader>tt", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" })
-keymap("t", "<leader>tt", "<C-\\><C-n><cmd>ToggleTerm<CR>", { desc = "Close terminal" })
-keymap("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical size=40<CR>", { desc = "Toggle vertical terminal" })
 
 -- W3m browser
 function OpenW3mWithUrl(split)
@@ -86,3 +80,6 @@ end, { desc = "vertical split" })
 vim.keymap.set("n", "<leader>/h", function()
 	OpenW3mWithUrl("Split")
 end, { desc = "horizontal split" })
+
+-- Snacks
+-- all snacks keys are stored in lua/plugins/snacks.lua

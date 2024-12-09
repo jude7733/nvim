@@ -20,6 +20,8 @@ return {
 			{ "<leader>x", group = "trouble" },
 			{ "<leader>c", group = "comment" },
 			{ "<leader>/", group = "browse" },
+			{ "<leader>b", group = "buffer" },
+			{ "<leader>t", group = "toggle" },
 		})
 	end,
 	keys = {

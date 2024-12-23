@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 local opt = vim.opt
-vim.notify = require("notify")
+-- vim.ui.input = require("snacks").input()
 
 -- Tab / Indentation
 opt.tabstop = 2

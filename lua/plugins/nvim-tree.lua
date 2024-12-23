@@ -28,7 +28,7 @@ return {
 			-- disable window_picker explorer to work well window splits
 			actions = {
 				open_file = {
-					-- quit_on_open = true,
+					quit_on_open = true,
 					window_picker = {
 						enable = false,
 					},

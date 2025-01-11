@@ -22,6 +22,7 @@ return {
 			{ "<leader>/", group = "browse" },
 			{ "<leader>b", group = "buffer" },
 			{ "<leader>t", group = "toggle" },
+			{ "<leader>g", group = "git" },
 		})
 	end,
 	keys = {

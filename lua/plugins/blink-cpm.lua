@@ -3,8 +3,6 @@ return {
 	dependencies = { "rafamadriz/friendly-snippets", "giuxtaposition/blink-cmp-copilot" },
 	lazy = false,
 	version = "v0.*",
-	---@module 'blink.cmp'
-	---@type blink.cmp.Config
 	opts = {
 		keymap = {
 			preset = "enter",
@@ -32,17 +30,18 @@ return {
 			},
 		},
 		completion = {
-			list = { selection = "auto_insert" },
+			list = { selection = { preselect = false, auto_insert = true } },
 			ghost_text = { enabled = true },
 			documentation = {
 				auto_show = true,
-				auto_show_delay_ms = 500,
+				auto_show_delay_ms = 200,
 			},
 			accept = {
 				auto_brackets = {
 					enabled = true,
 				},
 			},
+			menu = { border = "rounded" },
 		},
 		signature = { enabled = true },
 		appearance = {

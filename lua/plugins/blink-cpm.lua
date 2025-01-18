@@ -30,7 +30,7 @@ return {
 			},
 		},
 		completion = {
-			list = { selection = { preselect = false, auto_insert = true } },
+			list = { selection = { preselect = false, auto_insert = false } },
 			ghost_text = { enabled = true },
 			documentation = {
 				auto_show = true,

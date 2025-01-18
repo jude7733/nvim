@@ -2,108 +2,119 @@ return {
 	"folke/snacks.nvim",
 	priority = 1000,
 	lazy = false,
-	opts = {
-		bigfile = { enabled = true },
-		notifier = {
-			enabled = true,
-			timeout = 3000,
-		},
-		input = { enabled = true, prompt_pos = "left", icon_pos = "left", expand = false },
-		notify = {
-			enabled = true,
-		},
-		scroll = {
-			enabled = true,
-		},
-		scope = { enabled = true },
-		indent = {
-			enabled = true,
-			char = "╎",
-			only_current = true,
-		},
-		quickfile = { enabled = true },
-		statuscolumn = { enabled = true },
-		words = { enabled = true },
-		lazygit = { enabled = true },
-		terminal = { enabled = true },
-		zen = {
-			enabled = true,
-		},
-		styles = {
-			notification = {
-				wo = { wrap = true },
+	config = function()
+		local Snacks = require("snacks")
+		Snacks.setup({
+			animate = {
+				enabled = true,
+				duration = 20, -- ms per step
+				easing = "linear",
+				fps = 60,
 			},
-			input = {
-				border = "none",
-				row = -1,
-				width = 0,
-				wo = {
-					winhighlight = "NormalFloat:StatusLine",
+			indent = {
+				enabled = true,
+				priority = 1,
+				char = "╎",
+				only_scope = false,
+				only_current = true,
+			},
+			input = { enabled = true },
+			bigfile = { enabled = true, size = 100 * 1024 },
+			notifier = {
+				enabled = true,
+				timeout = 3000,
+			},
+			notify = {
+				enabled = true,
+			},
+			scroll = {
+				enabled = true,
+			},
+			scope = { enabled = true },
+			quickfile = { enabled = true },
+			statuscolumn = { enabled = true },
+			words = { enabled = true },
+			lazygit = { enabled = true },
+			terminal = { enabled = true },
+			zen = {
+				enabled = true,
+			},
+			styles = {
+				notification = {
+					wo = { wrap = true },
+				},
+				input = {
+					border = "none",
+					row = -1,
+					width = 0,
+					wo = {
+						winhighlight = "NormalFloat:StatusLine",
+					},
 				},
 			},
-		},
-		dashboard = {
-			enabled = true,
-			sections = {
-				{ section = "header" },
-				{ section = "keys", gap = 1, padding = 1 },
-				{
-					icon = " ",
-					desc = "Browse Repo",
-					padding = 1,
-					key = "b",
-					action = function()
-						Snacks.gitbrowse()
+			dashboard = {
+				enabled = true,
+				sections = {
+					{ section = "header" },
+					{ section = "keys", gap = 1, padding = 1 },
+					{
+						icon = " ",
+						desc = "Browse Repo",
+						padding = 1,
+						key = "b",
+						action = function()
+							Snacks.gitbrowse()
+						end,
+					},
+					-- {
+					-- 	pane = 2,
+					-- 	{
+					-- 		section = "terminal",
+					-- 		cmd = "ascii-image-converter $(cat ~/.cache/wal/wal) -C -c",
+					-- 		height = 17,
+					-- 		padding = 1,
+					-- 	},
+					-- },
+					function()
+						local in_git = Snacks.git.get_root() ~= nil
+						local cmds = {
+							{
+								title = "Open Issues",
+								cmd = "gh issue list -L 3",
+								key = "i",
+								action = function()
+									vim.fn.jobstart("gh issue list --web", { detach = true })
+								end,
+								icon = " ",
+								height = 7,
+							},
+							{
+								icon = " ",
+								title = "Open PRs",
+								cmd = "gh pr list -L 3",
+								key = "p",
+								action = function()
+									vim.fn.jobstart("gh pr list --web", { detach = true })
+								end,
+								height = 7,
+							},
+						}
+						return vim.tbl_map(function(cmd)
+							return vim.tbl_extend("force", {
+								pane = 2,
+								section = "terminal",
+								enabled = in_git,
+								padding = 1,
+								ttl = 5 * 60,
+								indent = 3,
+							}, cmd)
+						end, cmds)
 					end,
+					{ section = "startup" },
 				},
-				-- {
-				-- 	pane = 2,
-				-- 	{
-				-- 		section = "terminal",
-				-- 		cmd = "ascii-image-converter $(cat ~/.cache/wal/wal) -C -c",
-				-- 		height = 17,
-				-- 		padding = 1,
-				-- 	},
-				-- },
-				function()
-					local in_git = Snacks.git.get_root() ~= nil
-					local cmds = {
-						{
-							title = "Open Issues",
-							cmd = "gh issue list -L 3",
-							key = "i",
-							action = function()
-								vim.fn.jobstart("gh issue list --web", { detach = true })
-							end,
-							icon = " ",
-							height = 7,
-						},
-						{
-							icon = " ",
-							title = "Open PRs",
-							cmd = "gh pr list -L 3",
-							key = "p",
-							action = function()
-								vim.fn.jobstart("gh pr list --web", { detach = true })
-							end,
-							height = 7,
-						},
-					}
-					return vim.tbl_map(function(cmd)
-						return vim.tbl_extend("force", {
-							pane = 2,
-							section = "terminal",
-							enabled = in_git,
-							padding = 1,
-							ttl = 5 * 60,
-							indent = 3,
-						}, cmd)
-					end, cmds)
-				end,
-				{ section = "startup" },
 			},
-		},
-	},
+		})
+	end,
 	keys = {
 		{
 			"<leader>bb",
@@ -250,9 +261,6 @@ return {
 					Snacks.debug.backtrace()
 				end
 				vim.print = _G.dd -- Override print to use snacks for `:=` command
-
-				--set Input
-				vim.ui.input = Snacks.input
 
 				-- Create some toggle mappings
 				Snacks.toggle.option("spell", { name = "Spelling" }):map("<leader>ts")

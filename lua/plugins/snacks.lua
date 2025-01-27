@@ -24,12 +24,9 @@ return {
 				enabled = true,
 				timeout = 3000,
 			},
-			notify = {
-				enabled = true,
-			},
-			scroll = {
-				enabled = true,
-			},
+			notify = { enabled = true },
+			picker = { enabled = true },
+			scroll = { enabled = true },
 			scope = { enabled = true },
 			quickfile = { enabled = true },
 			statuscolumn = { enabled = true },
@@ -247,6 +244,251 @@ return {
 				Snacks.zen()
 			end,
 			desc = "Zen Mode",
+		},
+		{
+			"<leader>fb",
+			function()
+				Snacks.picker.buffers()
+			end,
+			desc = "Buffers",
+		},
+		{
+			"<leader>fg",
+			function()
+				Snacks.picker.grep()
+			end,
+			desc = "Grep",
+		},
+		{
+			"<leader>fc",
+			function()
+				Snacks.picker.command_history()
+			end,
+			desc = "Command History",
+		},
+		{
+			"<leader>ff",
+			function()
+				Snacks.picker.files()
+			end,
+			desc = "Find Files",
+		},
+		-- find
+		{
+			"<leader>fs",
+			function()
+				Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
+			end,
+			desc = "Find Config File",
+		},
+		{
+			"<leader>fgf",
+			function()
+				Snacks.picker.git_files()
+			end,
+			desc = "Find Git Files",
+		},
+		{
+			"<leader>fgb",
+			function()
+				Snacks.picker.git_branches()
+			end,
+			desc = "Git Branch",
+		},
+		{
+			"<leader>fr",
+			function()
+				Snacks.picker.recent()
+			end,
+			desc = "Recent",
+		},
+		-- git
+		{
+			"<leader>fgl",
+			function()
+				Snacks.picker.git_log()
+			end,
+			desc = "Git Log",
+		},
+		{
+			"<leader>fgs",
+			function()
+				Snacks.picker.git_status()
+			end,
+			desc = "Git Status",
+		},
+		-- Grep
+		{
+			"<leader>fB",
+			function()
+				Snacks.picker.lines()
+			end,
+			desc = "Buffer Lines",
+		},
+		{
+			"<leader>fG",
+			function()
+				Snacks.picker.grep_buffers()
+			end,
+			desc = "Grep Open Buffers",
+		},
+		{
+			"<leader>sw",
+			function()
+				Snacks.picker.grep_word()
+			end,
+			desc = "Visual selection or word",
+			mode = { "n", "x" },
+		},
+		-- search
+		{
+			"<leader>frr",
+			function()
+				Snacks.picker.registers()
+			end,
+			desc = "Registers",
+		},
+		{
+			"<leader>fa",
+			function()
+				Snacks.picker.autocmds()
+			end,
+			desc = "Autocmds",
+		},
+		{
+			"<leader>fcc",
+			function()
+				Snacks.picker.commands()
+			end,
+			desc = "Commands",
+		},
+		{
+			"<leader>fd",
+			function()
+				Snacks.picker.diagnostics()
+			end,
+			desc = "Diagnostics",
+		},
+		{
+			"<leader>fh",
+			function()
+				Snacks.picker.help()
+			end,
+			desc = "Help Pages",
+		},
+		{
+			"<leader>fH",
+			function()
+				Snacks.picker.highlights()
+			end,
+			desc = "Highlights",
+		},
+		{
+			"<leader>fj",
+			function()
+				Snacks.picker.jumps()
+			end,
+			desc = "Jumps",
+		},
+		{
+			"<leader>fk",
+			function()
+				Snacks.picker.keymaps()
+			end,
+			desc = "Keymaps",
+		},
+		{
+			"<leader>sl",
+			function()
+				Snacks.picker.loclist()
+			end,
+			desc = "Location List",
+		},
+		{
+			"<leader>fM",
+			function()
+				Snacks.picker.man()
+			end,
+			desc = "Man Pages",
+		},
+		{
+			"<leader>fm",
+			function()
+				Snacks.picker.marks()
+			end,
+			desc = "Marks",
+		},
+		{
+			"<leader>fR",
+			function()
+				Snacks.picker.resume()
+			end,
+			desc = "Resume",
+		},
+		{
+			"<leader>fq",
+			function()
+				Snacks.picker.qflist()
+			end,
+			desc = "Quickfix List",
+		},
+		{
+			"<leader>fC",
+			function()
+				Snacks.picker.colorschemes()
+			end,
+			desc = "Colorschemes",
+		},
+		{
+			"<leader>fp",
+			function()
+				Snacks.picker.projects()
+			end,
+			desc = "Projects",
+		},
+		-- LSP
+		{
+			"<leader>fld",
+			function()
+				Snacks.picker.lsp_definitions()
+			end,
+			desc = "Goto Definition",
+		},
+		{
+			"<leader>flr",
+			function()
+				Snacks.picker.lsp_references()
+			end,
+			nowait = true,
+			desc = "References",
+		},
+		{
+			"<leader>fli",
+			function()
+				Snacks.picker.lsp_implementations()
+			end,
+			desc = "Goto Implementation",
+		},
+		{
+			"<leader>fly",
+			function()
+				Snacks.picker.lsp_type_definitions()
+			end,
+			desc = "Goto T[y]pe Definition",
+		},
+		{
+			"<leader>fls",
+			function()
+				Snacks.picker.lsp_symbols()
+			end,
+			desc = "LSP Symbols",
+		},
+		{
+			"<leader>fp",
+			function()
+				Snacks.picker.cliphist()
+			end,
+			desc = "Clip hist",
 		},
 	},
 	init = function()

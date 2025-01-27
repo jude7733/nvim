@@ -12,20 +12,6 @@ keymap("n", "<leader>ef", ":NvimTreeFocus<CR>", { desc = "Focus on file tree" })
 keymap("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
 keymap("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
 
--- Telescope
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
-keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
-keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
-keymap("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", { desc = "Show Telescope keymaps" })
-keymap("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>", { desc = "Show diagnostics" })
-keymap("n", "<leader>fc", "<cmd>Telescope colorscheme<cr>", { desc = "colorscheme" })
-keymap("n", "<leader>fo", "<cmd>Telescope vim_options<cr>", { desc = "Vim Options" })
-keymap("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
-keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find Buffers" })
-keymap("n", "<leader>f/", "<cmd>Telescope search_history<cr>", { desc = "Search history" })
-keymap("n", "<leader>fn", "<cmd>Telescope notify<cr>", { desc = "Show notifications" })
-keymap("n", "<leader>fs", "<cmd>SessionSearch<cr>", { desc = "Session Search" })
-
 -- Split nav
 keymap("n", "<C-h>", "<C-w>h", { desc = "nav left" })
 keymap("n", "<C-j>", "<C-w>j", { desc = "nav down" })

@@ -32,6 +32,7 @@ return {
 				"pyright",
 				"bashls",
 				"jsonls",
+				"rust_analyzer",
 			},
 		})
 
@@ -46,6 +47,7 @@ return {
 				"flake8",
 				"mypy",
 				"ruff",
+				"codelldb",
 			},
 		})
 	end,

@@ -13,7 +13,7 @@ return {
 		{
 			"<leader>fT",
 			function()
-				Snacks.picker.todo_comments({ keywords = { "TODO", "FIX", "FIXME", "NOTE" } })
+				Snacks.picker.todo_comments({ keywords = { "TODO", "FIX", "FIXME" } })
 			end,
 			desc = "Todo/Fix/Fixme",
 		},

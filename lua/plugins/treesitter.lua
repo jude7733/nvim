@@ -33,6 +33,11 @@ return {
 			"markdown_inline",
 		},
 		auto_install = true,
+		rainbow = {
+			enable = true,
+			extended_mode = true,
+			max_file_lines = nil,
+		},
 		highlight = {
 			enable = true,
 			additional_vim_regex_highlighting = true,

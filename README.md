@@ -14,7 +14,6 @@ This repository contains my personal Neovim configuration files, designed to enh
 - **[nvim](https://github.com/neovim/neovim)**: Version 0.10 or higher.
 - **[npm](https://github.com/npm/cli)** and **[nodejs](https://github.com/nodejs/node)**: Required for installing packages and plugins.
 - **[deno](https://github.com/denoland/deno)** and **[webkit2gtk](https://webkitgtk.org)**: Required for markdown preview (peek).
-- **[ripgrep](https://github.com/BurntSushi/ripgrep)**: Required for the Telescope plugin.
 - **[nerd-fonts](https://www.nerdfonts.com/)**: Required for the icons to display correctly.
 - **[lazygit](https://github.com/jesseduffield/lazygit)**: Required for the lazygit plugin.
 
@@ -32,20 +31,25 @@ git clone https://github.com/jude7733/nvim.git ~/.config/nvim
 
 - **[lazy](https://github.com/folke/lazy.nvim)**: A modern plugin manager for Neovim.
 
+### Snacks.nvim
+
+- **[snacks](https://github.com/folke/snacks.nvim)**: A collection of QoL plugins for Neovim .
+
 ### LSP (Language Server Protocol)
 
 - **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)**: Configurations for Nvim LSP.
 - **[lspsaga](https://github.com/nvimdev/lspsaga.nvim)**: Enhancements for LSP experience.
 - **[Mason](https://github.com/williamboman/mason.nvim)**: Package manager for LSP servers and tools.
 - **[typescript-tools](https://github.com/pmizio/typescript-tools.nvim)**: TypeScript support for Neovim.
+- **[rustacianvim](https://github.com/mrcjkb/rustaceanvim)**: Supercharge your Rust experience in Neovim! A heavily modified fork of rust-tools.nvim.
+
+### Debugging
+
+- **[nvim-dap](https://github.com/mfussenegger/nvim-dap)**: Debug Adapter Protocol client implementation for Neovim.
 
 ### Autocompletion
 
 - **[blink.cmp](https://github.com/Saghen/blink.cmp)**: Performant, batteries-included completion plugin.
-
-### Fuzzy Finder
-
-- **[telescope](https://github.com/nvim-telescope/telescope.nvim)**: Fuzzy finder for files, buffers, etc.
 
 ### Git Integration
 
@@ -60,14 +64,12 @@ git clone https://github.com/jude7733/nvim.git ~/.config/nvim
 
 - **[lualine](https://github.com/nvim-lualine/lualine.nvim)**: Status line plugin.
 - **[nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)**: Icons for various file types.
-- **[toggleterm](https://github.com/akinsho/toggleterm.nvim)**: Terminal integration.
-- **[alpha](https://github.com/goolord/alpha-nvim)**: Dashboard plugin.
-- **[dressing](https://github.com/stevearc/dressing.nvim)**: Improved UI for input dialogs.
 - **[noice](https://github.com/folke/noice.nvim)**: Enhanced UI for messages, cmdline, and popup menu.
 - **[indentscope](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-indentscope.md)**: Provides indent guides
 - **[nvim-colorizer](https://github.com/NvChad/nvim-colorizer.lua)**: Colorizer plugin for better color handling in code.
 - **[vim-illuminate](https://github.com/RRethy/vim-illuminate)**: Highlight references to the word under the cursor.
 - **[eyeliner](https://github.com/jinh0/eyeliner.nvim)**: Move faster with unique f/F indicators.
+- **[nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)**: A UI for nvim-dap.
 
 ### Color Schemes
 
@@ -95,6 +97,7 @@ git clone https://github.com/jude7733/nvim.git ~/.config/nvim
 ### AI and Productivity Tools
 
 - **[copilot](https://github.com/zbirenbaum/copilot.lua)**: AI-powered code completion.
+- **[copilot-chat](https://github.com/CopilotC-Nvim/CopilotChat.nvim)**: Github copilot chat inside nvim.
 
 ### Formatting and Linting
 

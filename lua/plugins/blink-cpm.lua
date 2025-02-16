@@ -41,7 +41,8 @@ return {
 					enabled = true,
 				},
 			},
-			menu = { border = "rounded" },
+			menu = { auto_show = true, border = "rounded" },
+			trigger = { show_on_keyword = true },
 		},
 		signature = { enabled = true },
 		appearance = {

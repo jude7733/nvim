@@ -19,6 +19,7 @@ return {
 				only_current = true,
 			},
 			input = { enabled = true },
+			image = { enabled = true },
 			bigfile = { enabled = true, size = 100 * 1024 },
 			notifier = {
 				enabled = true,
@@ -253,7 +254,7 @@ return {
 			desc = "Buffers",
 		},
 		{
-			"<leader>fg",
+			"<leader>fs",
 			function()
 				Snacks.picker.grep()
 			end,
@@ -275,7 +276,7 @@ return {
 		},
 		-- find
 		{
-			"<leader>fs",
+			"<leader>fS",
 			function()
 				Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
 			end,

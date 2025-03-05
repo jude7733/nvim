@@ -197,6 +197,34 @@ return {
 			desc = "Lazygit Log (cwd)",
 		},
 		{
+			"<leader>gL",
+			function()
+				Snacks.picker.git_log_line()
+			end,
+			desc = "Git Log Line",
+		},
+		{
+			"<leader>gS",
+			function()
+				Snacks.picker.git_stash()
+			end,
+			desc = "Git Stash",
+		},
+		{
+			"<leader>gd",
+			function()
+				Snacks.picker.git_diff()
+			end,
+			desc = "Git Diff (Hunks)",
+		},
+		{
+			"<leader>gf",
+			function()
+				Snacks.picker.git_log_file()
+			end,
+			desc = "Git Log File",
+		},
+		{
 			"<leader>tn",
 			function()
 				Snacks.notifier.hide()
@@ -251,26 +279,28 @@ return {
 				})
 			end,
 		},
+		-- Zen Mode
 		{
-			"<leader>tz",
+			"<leader>z",
 			function()
 				Snacks.zen()
 			end,
 			desc = "Zen Mode",
 		},
 		{
+			"<leader>Z",
+			function()
+				Snacks.zen.zoom()
+			end,
+			desc = "Toggle Zoom",
+		},
+		-- find
+		{
 			"<leader>fb",
 			function()
 				Snacks.picker.buffers()
 			end,
 			desc = "Buffers",
-		},
-		{
-			"<leader>fs",
-			function()
-				Snacks.picker.grep()
-			end,
-			desc = "Grep",
 		},
 		{
 			"<leader>fc",
@@ -286,7 +316,6 @@ return {
 			end,
 			desc = "Find Files",
 		},
-		-- find
 		{
 			"<leader>fS",
 			function()
@@ -295,71 +324,11 @@ return {
 			desc = "Find Config File",
 		},
 		{
-			"<leader>fgf",
-			function()
-				Snacks.picker.git_files()
-			end,
-			desc = "Find Git Files",
-		},
-		{
-			"<leader>fgb",
-			function()
-				Snacks.picker.git_branches()
-			end,
-			desc = "Git Branch",
-		},
-		{
 			"<leader>fr",
 			function()
 				Snacks.picker.recent()
 			end,
 			desc = "Recent",
-		},
-		-- git
-		{
-			"<leader>fgl",
-			function()
-				Snacks.picker.git_log()
-			end,
-			desc = "Git Log",
-		},
-		{
-			"<leader>fgs",
-			function()
-				Snacks.picker.git_status()
-			end,
-			desc = "Git Status",
-		},
-		-- Grep
-		{
-			"<leader>fB",
-			function()
-				Snacks.picker.lines()
-			end,
-			desc = "Buffer Lines",
-		},
-		{
-			"<leader>fG",
-			function()
-				Snacks.picker.grep_buffers()
-			end,
-			desc = "Grep Open Buffers",
-		},
-		{
-			"<leader>sw",
-			function()
-				Snacks.picker.grep_word()
-			end,
-			desc = "Visual selection or word",
-			mode = { "n", "x" },
-		},
-		-- search
-		{
-			"<leader>frr",
-			function()
-				Snacks.picker.registers()
-			end,
-			desc = "Registers",
 		},
 		{
 			"<leader>fa",
@@ -404,18 +373,77 @@ return {
 			desc = "Jumps",
 		},
 		{
+			"<leader>fi",
+			function()
+				Snacks.picker.icons()
+			end,
+			desc = "Icons",
+		},
+		{
 			"<leader>fk",
 			function()
 				Snacks.picker.keymaps()
 			end,
 			desc = "Keymaps",
 		},
+		-- git
 		{
-			"<leader>sl",
+			"<leader>fgf",
 			function()
-				Snacks.picker.loclist()
+				Snacks.picker.git_files()
 			end,
-			desc = "Location List",
+			desc = "Find Git Files",
+		},
+		{
+			"<leader>fgb",
+			function()
+				Snacks.picker.git_branches()
+			end,
+			desc = "Git Branch",
+		},
+		{
+			"<leader>fgl",
+			function()
+				Snacks.picker.git_log()
+			end,
+			desc = "Git Log",
+		},
+		{
+			"<leader>fgs",
+			function()
+				Snacks.picker.git_status()
+			end,
+			desc = "Git Status",
+		},
+		-- Grep
+		{
+			"<leader>fs",
+			function()
+				Snacks.picker.grep()
+			end,
+			desc = "Grep",
+		},
+		{
+			"<leader>fG",
+			function()
+				Snacks.picker.grep_buffers()
+			end,
+			desc = "Grep Open Buffers",
+		},
+		{
+			"<leader>sw",
+			function()
+				Snacks.picker.grep_word()
+			end,
+			desc = "Visual selection or word",
+			mode = { "n", "x" },
+		},
+		{
+			"<leader>fB",
+			function()
+				Snacks.picker.lines()
+			end,
+			desc = "Buffer Lines",
 		},
 		{
 			"<leader>fM",
@@ -446,6 +474,13 @@ return {
 			desc = "Quickfix List",
 		},
 		{
+			"<leader>fu",
+			function()
+				Snacks.picker.undo()
+			end,
+			desc = "Undo History",
+		},
+		{
 			"<leader>fC",
 			function()
 				Snacks.picker.colorschemes()
@@ -453,11 +488,33 @@ return {
 			desc = "Colorschemes",
 		},
 		{
-			"<leader>fp",
+			"<leader>fP",
 			function()
 				Snacks.picker.projects()
 			end,
 			desc = "Projects",
+		},
+		{
+			"<leader>fp",
+			function()
+				Snacks.picker.cliphist()
+			end,
+			desc = "Clip hist",
+		},
+		-- search
+		{
+			"<leader>frr",
+			function()
+				Snacks.picker.registers()
+			end,
+			desc = "Registers",
+		},
+		{
+			"<leader>sl",
+			function()
+				Snacks.picker.loclist()
+			end,
+			desc = "Location List",
 		},
 		-- LSP
 		{
@@ -496,13 +553,6 @@ return {
 			end,
 			desc = "LSP Symbols",
 		},
-		{
-			"<leader>fp",
-			function()
-				Snacks.picker.cliphist()
-			end,
-			desc = "Clip hist",
-		},
 	},
 	init = function()
 		vim.api.nvim_create_autocmd("User", {
@@ -531,6 +581,8 @@ return {
 					.option("background", { off = "light", on = "dark", name = "Dark Background" })
 					:map("<leader>tb")
 				Snacks.toggle.inlay_hints():map("<leader>th")
+				Snacks.toggle.indent():map("<leader>tg")
+				Snacks.toggle.dim():map("<leader>tD")
 			end,
 		})
 	end,

@@ -17,6 +17,7 @@ This repository contains my personal Neovim configuration files, designed to enh
 - **[nerd-fonts](https://www.nerdfonts.com/)**: Required for the icons to display correctly.
 - **[lazygit](https://github.com/jesseduffield/lazygit)**: Required for the lazygit plugin.
 - **[fd](https://github.com/sharkdp/fd)**: Required for snacks.picker.explorer.
+- **[ghostscript](https://www.ghostscript.com)**: Required for pdf preview by snacks.
 
 ## To set up nvim configuration:
 

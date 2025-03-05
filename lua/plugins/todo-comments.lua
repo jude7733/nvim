@@ -1,7 +1,6 @@
 return {
-	event = { "BufReadPre", "BufNewFile" },
 	"folke/todo-comments.nvim",
-	dependencies = { "nvim-lua/plenary.nvim" },
+	optional = true,
 	keys = {
 		{
 			"<leader>ft",

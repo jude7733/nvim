@@ -1,8 +1,7 @@
 return {
 	"saghen/blink.cmp",
 	dependencies = { "rafamadriz/friendly-snippets", "giuxtaposition/blink-cmp-copilot" },
-	lazy = false,
-	version = "v0.*",
+	version = "*",
 	opts = {
 		keymap = {
 			preset = "enter",
@@ -44,6 +43,7 @@ return {
 			menu = { auto_show = true, border = "rounded" },
 			trigger = { show_on_keyword = true },
 		},
+		fuzzy = { implementation = "prefer_rust_with_warning" },
 		signature = { enabled = true },
 		appearance = {
 			kind_icons = {

@@ -11,7 +11,7 @@ return {
 	config = function()
 		require("which-key").add({
 			{ "<leader>k", group = "close" },
-			{ "<leader>e", group = "tree" },
+			{ "<leader>e", group = "explorer" },
 			{ "<leader>f", group = "find" },
 			{ "<leader>h", group = "hunks" },
 			{ "<leader>l", group = "LSP" },

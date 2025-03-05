@@ -16,6 +16,7 @@ This repository contains my personal Neovim configuration files, designed to enh
 - **[deno](https://github.com/denoland/deno)** and **[webkit2gtk](https://webkitgtk.org)**: Required for markdown preview (peek).
 - **[nerd-fonts](https://www.nerdfonts.com/)**: Required for the icons to display correctly.
 - **[lazygit](https://github.com/jesseduffield/lazygit)**: Required for the lazygit plugin.
+- **[fd](https://github.com/sharkdp/fd)**: Required for snacks.picker.explorer.
 
 ## To set up nvim configuration:
 
@@ -33,7 +34,7 @@ git clone https://github.com/jude7733/nvim.git ~/.config/nvim
 
 ### Snacks.nvim
 
-- **[snacks](https://github.com/folke/snacks.nvim)**: A collection of QoL plugins for Neovim .
+- **[snacks](https://github.com/folke/snacks.nvim)**: A collection of QoL plugins for Neovim.
 
 ### LSP (Language Server Protocol)
 
@@ -55,10 +56,6 @@ git clone https://github.com/jude7733/nvim.git ~/.config/nvim
 
 - **[lazygit](https://github.com/kdheepak/lazygit.nvim)**: Terminal UI for Git commands.
 - **[gitsigns](https://github.com/lewis6991/gitsigns.nvim)**: Git integration with Neovim.
-
-### File Management
-
-- **[nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)**: File explorer for Neovim.
 
 ### UI Enhancements
 

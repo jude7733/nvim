@@ -2,118 +2,130 @@ return {
 	"folke/snacks.nvim",
 	priority = 1000,
 	lazy = false,
-	config = function()
-		local Snacks = require("snacks")
-		Snacks.setup({
-			animate = {
-				enabled = true,
-				duration = 20, -- ms per step
-				easing = "linear",
-				fps = 60,
-			},
-			indent = {
-				enabled = true,
-				priority = 1,
-				char = "╎",
-				only_scope = false,
-				only_current = true,
-			},
-			input = { enabled = true },
-			image = { enabled = true },
-			bigfile = { enabled = true, size = 100 * 1024 },
-			notifier = {
-				enabled = true,
-				timeout = 3000,
-			},
-			notify = { enabled = true },
-			picker = { enabled = true },
-			scroll = { enabled = true },
-			scope = { enabled = true },
-			quickfile = { enabled = true },
-			statuscolumn = { enabled = true },
-			words = { enabled = true },
-			lazygit = { enabled = true },
-			terminal = { enabled = true },
-			zen = {
-				enabled = true,
-			},
-			styles = {
-				notification = {
-					wo = { wrap = true },
-				},
-				input = {
-					border = "none",
-					row = -1,
-					width = 0,
-					wo = {
-						winhighlight = "NormalFloat:StatusLine",
-					},
+	opts = {
+		animate = {
+			enabled = true,
+			duration = 20, -- ms per step
+			easing = "linear",
+			fps = 60,
+		},
+		indent = {
+			enabled = true,
+			priority = 1,
+			char = "╎",
+			only_scope = false,
+			only_current = true,
+		},
+		input = { enabled = true },
+		image = { enabled = true },
+		bigfile = { enabled = true, size = 100 * 1024 },
+		notifier = {
+			enabled = true,
+			timeout = 3000,
+		},
+		notify = { enabled = true },
+		picker = {
+			enabled = true,
+			sources = {
+				explorer = {
+					layout = { layout = { position = "right" } },
 				},
 			},
-			dashboard = {
-				enabled = true,
-				sections = {
-					{ section = "header" },
-					{ section = "keys", gap = 1, padding = 1 },
-					{
-						icon = " ",
-						desc = "Browse Repo",
-						padding = 1,
-						key = "b",
-						action = function()
-							Snacks.gitbrowse()
-						end,
-					},
-					-- {
-					-- 	pane = 2,
-					-- 	{
-					-- 		section = "terminal",
-					-- 		cmd = "ascii-image-converter $(cat ~/.cache/wal/wal) -C -c",
-					-- 		height = 17,
-					-- 		padding = 1,
-					-- 	},
-					-- },
-					function()
-						local in_git = Snacks.git.get_root() ~= nil
-						local cmds = {
-							{
-								title = "Open Issues",
-								cmd = "gh issue list -L 3",
-								key = "i",
-								action = function()
-									vim.fn.jobstart("gh issue list --web", { detach = true })
-								end,
-								icon = " ",
-								height = 7,
-							},
-							{
-								icon = " ",
-								title = "Open PRs",
-								cmd = "gh pr list -L 3",
-								key = "p",
-								action = function()
-									vim.fn.jobstart("gh pr list --web", { detach = true })
-								end,
-								height = 7,
-							},
-						}
-						return vim.tbl_map(function(cmd)
-							return vim.tbl_extend("force", {
-								pane = 2,
-								section = "terminal",
-								enabled = in_git,
-								padding = 1,
-								ttl = 5 * 60,
-								indent = 3,
-							}, cmd)
-						end, cmds)
+		},
+		explorer = { enabled = true },
+		scroll = { enabled = true },
+		scope = { enabled = true },
+		quickfile = { enabled = true },
+		statuscolumn = { enabled = true },
+		words = { enabled = true },
+		lazygit = { enabled = true },
+		terminal = { enabled = true },
+		zen = {
+			enabled = true,
+		},
+		styles = {
+			notification = {
+				wo = { wrap = true },
+			},
+			input = {
+				border = "none",
+				row = -1,
+				width = 0,
+				wo = {
+					winhighlight = "NormalFloat:StatusLine",
+				},
+			},
+		},
+		dashboard = {
+			enabled = true,
+			sections = {
+				{ section = "header" },
+				{ section = "keys", gap = 1, padding = 1 },
+				{
+					icon = " ",
+					desc = "Browse Repo",
+					padding = 1,
+					key = "b",
+					action = function()
+						Snacks.gitbrowse()
 					end,
-					{ section = "startup" },
 				},
+				-- {
+				-- 	pane = 2,
+				-- 	{
+				-- 		section = "terminal",
+				-- 		cmd = "ascii-image-converter $(cat ~/.cache/wal/wal) -C -c",
+				-- 		height = 17,
+				-- 		padding = 1,
+				-- 	},
+				-- },
+				function()
+					local in_git = Snacks.git.get_root() ~= nil
+					local cmds = {
+						{
+							title = "Open Issues",
+							cmd = "gh issue list -L 3",
+							key = "i",
+							action = function()
+								vim.fn.jobstart("gh issue list --web", { detach = true })
+							end,
+							icon = " ",
+							height = 7,
+						},
+						{
+							icon = " ",
+							title = "Open PRs",
+							cmd = "gh pr list -L 3",
+							key = "p",
+							action = function()
+								vim.fn.jobstart("gh pr list --web", { detach = true })
+							end,
+							height = 7,
+						},
+					}
+					return vim.tbl_map(function(cmd)
+						return vim.tbl_extend("force", {
+							pane = 2,
+							section = "terminal",
+							enabled = in_git,
+							padding = 1,
+							ttl = 5 * 60,
+							indent = 3,
+						}, cmd)
+					end, cmds)
+				end,
+				{ section = "startup" },
 			},
-		})
-	end,
+		},
+	},
 	keys = {
+		{
+			"<leader>e",
+			function()
+				Snacks.explorer()
+			end,
+			desc = "File Explorer",
+		},
 		{
 			"<leader>bb",
 			function()
@@ -192,7 +204,7 @@ return {
 			desc = "Dismiss All Notifications",
 		},
 		{
-			"<c-/>",
+			"<c-`>",
 			function()
 				Snacks.terminal()
 			end,

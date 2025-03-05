@@ -7,11 +7,6 @@ keymap("n", "ZZ", "<cmd>q!<cr>", { desc = "Exit without saving" })
 keymap("n", "<leader>+", "<C-a>", { desc = "increment number" })
 keymap("n", "<leader>-", "<C-x>", { desc = "decrement number" })
 
--- nvim-tree
-keymap("n", "<leader>ef", ":NvimTreeFocus<CR>", { desc = "Focus on file tree" })
-keymap("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
-keymap("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
-
 -- Split nav
 keymap("n", "<C-h>", "<C-w>h", { desc = "nav left" })
 keymap("n", "<C-j>", "<C-w>j", { desc = "nav down" })

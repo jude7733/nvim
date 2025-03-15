@@ -1,15 +1,11 @@
 local autocmd = vim.api.nvim_create_autocmd
 
-vim.api.nvim_create_user_command("Browse", function(opts)
-	vim.fn.system({ "xdg-open", opts.fargs[1] })
-end, { nargs = 1 })
-
 autocmd("TextYankPost", {
-	desc = "Highlight yanked text",
-	pattern = "*",
-	callback = function()
-		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 700 })
-	end,
+  desc = "Highlight yanked text",
+  pattern = "*",
+  callback = function()
+    vim.highlight.on_yank({ higroup = "IncSearch", timeout = 700 })
+  end,
 })
 
 -- vim.api.nvim_create_augroup("auto_save", { clear = true })
@@ -18,14 +14,6 @@ autocmd("TextYankPost", {
 -- 	pattern = "*",
 -- 	command = "silent! wa",
 -- 	desc = "Auto save when focus is lost",
--- })
-
--- vim.b.miniindentscope_disable = true
--- autocmd("TermOpen", {
--- 	desc = "Disable 'mini.indentscope' in terminal buffer",
--- 	callback = function(data)
--- 		vim.b[data.buf].miniindentscope_disable = true
--- 	end,
 -- })
 
 -- Language specific settings
@@ -46,31 +34,16 @@ autocmd("TextYankPost", {
 -- })
 
 vim.api.nvim_create_autocmd("LspAttach", {
-	group = vim.api.nvim_create_augroup("lsp_attach_disable_ruff_hover", { clear = true }),
-	callback = function(args)
-		local client = vim.lsp.get_client_by_id(args.data.client_id)
-		if client == nil then
-			return
-		end
-		if client.name == "ruff" then
-			-- Disable hover in favor of Pyright
-			client.server_capabilities.hoverProvider = false
-		end
-	end,
-	desc = "LSP: Disable hover capability from Ruff",
-})
-
-vim.api.nvim_create_autocmd("User", {
-	pattern = "BlinkCmpCompletionMenuOpen",
-	callback = function()
-		require("copilot.suggestion").dismiss()
-		vim.b.copilot_suggestion_hidden = true
-	end,
-})
-
-vim.api.nvim_create_autocmd("User", {
-	pattern = "BlinkCmpCompletionMenuClose",
-	callback = function()
-		vim.b.copilot_suggestion_hidden = false
-	end,
+  group = vim.api.nvim_create_augroup("lsp_attach_disable_ruff_hover", { clear = true }),
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if client == nil then
+      return
+    end
+    if client.name == "ruff" then
+      -- Disable hover in favor of Pyright
+      client.server_capabilities.hoverProvider = false
+    end
+  end,
+  desc = "LSP: Disable hover capability from Ruff",
 })

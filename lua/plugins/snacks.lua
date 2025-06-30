@@ -8,7 +8,10 @@ return {
         },
       },
     },
-    image = { enabled = true },
+    image = {
+      enabled = true,
+      doc = { enabled = true, inline = true, max_width = 40, max_height = 20 },
+    },
     styles = {
       notification = {
         wo = { wrap = true },

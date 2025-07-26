@@ -19,3 +19,6 @@ keymap("n", "<leader>kh", "<cmd>BufferLineCloseLeft<CR>", { desc = "close left" 
 keymap("n", "<leader>kl", "<cmd>BufferLineCloseRight<CR>", { desc = "close right" })
 keymap("n", "<leader>kd", "<cmd>BufferLineSortByDirectory<CR>", { desc = "sort by directory" })
 keymap("n", "<leader>kr", "<cmd>BufferLineSortByRelativeDirectory<CR>", { desc = "sort by relative directory" })
+
+-- Select all
+keymap("n", "<C-a>", "gg<S-v>G", { desc = "select all" })
